@@ -1,0 +1,56 @@
+{
+  "name": "banking_app",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": "16.11.0"
+  },
+  "scripts": {
+    "start": "CI= node lib/app",
+    "dev": "nodemon lib/app",
+    "build": "tsc",
+    "test": "jest --runInBand",
+    "compile": "yarn tsc -w",
+    "clean": "rm -rf dist && mkdir dist",
+    "heroku-postbuild": "yarn clean && yarn build"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-mongo": "^4.6.0",
+    "connect-mongodb-session": "^3.1.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "http-errors": "^2.0.0",
+    "jade": "~1.11.0",
+    "joi": "^17.5.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongodb-memory-server": "^8.1.0",
+    "mongoose": "^6.1.5",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.1",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "uuid": "^8.3.2",
+    "uuidv4": "^6.2.12"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/connect-mongodb-session": "^2.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/express-session": "^1.17.4",
+    "@types/jest": "^27.4.0",
+    "@types/morgan": "^1.9.3",
+    "@types/nodemon": "^1.19.1",
+    "@types/supertest": "^2.0.11",
+    "jest": "^27.4.7",
+    "ts-jest": "^27.1.2",
+    "typescript": "^4.5.4"
+  }
+}
